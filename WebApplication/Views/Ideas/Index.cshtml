@@ -1,0 +1,17 @@
+﻿@model IdeaHomeViewModel
+
+<h1> I am working </h1>
+
+<a asp-controller="ideas" asp-action="insert" >New Idea</a>
+
+@foreach (var idea in Model.Ideas)
+{
+<div class="row" style="background-color:antiquewhite">
+    <div class="col-md-3">@idea.Id</div>
+    <div class="col-md-3">@idea.Title</div>
+    <div class="col-md-3">@idea.Description</div>
+    <div class="col-md-3">@idea.UniqueCode</div>
+    <div class="col-md-3">@idea.DateCreated</div>
+    <div class="col-md-3"><a asp-controller="ideas" asp-action="delete" asp-route-id="@idea.Id">Delete</a></div>
+</div>
+}

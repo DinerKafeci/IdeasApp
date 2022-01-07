@@ -1,0 +1,17 @@
+﻿using Domain;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace WebApplication.Models
+{
+    public class IdeaViewModel
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int UniqueCode { get; set; }
+        public DateTime DateCreated { get; set; }
+    }
+}

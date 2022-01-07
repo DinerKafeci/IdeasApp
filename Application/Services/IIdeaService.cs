@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    interface IIdeaService
+    public interface IIdeaService
     {
         public void Add(IdeaDTO idea);
-        public IEnumerable<Idea> GetIdeas();
+        public IEnumerable<IdeaDTO> GetIdeas();
 
-        public Idea GetIdeaById(int id);
+        public IdeaDTO GetIdeaById(int id);
 
         public Idea GetIdeaByTitle(string title);
         public void Update(IdeaDTO idea);

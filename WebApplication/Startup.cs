@@ -32,6 +32,9 @@ namespace WebApplication
             var appSettings = appConfig.Get<AppSettings>();
 
             DiModule.Register(services, appSettings.ConnectionString);
+
+            services.AddAutoMapper(typeof(Application.Configurations.MappingProfile), typeof(WebApplication.Configurations.MappingProfile));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +61,7 @@ namespace WebApplication
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Ideas}/{action=Index}/{id?}");
             });
         }
     }
