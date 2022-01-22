@@ -8,28 +8,16 @@
             <input asp-for="Title"
                    type="text"
                    placeholder="Title"
-                   class="form-control" />
+                   class="form-control" 
+                   required 
+                   maxlength="100"/>
         </div>
         <div class="col-md-3">
             <input asp-for="Description"
                    type="text"
                    placeholder="Description"
-                   class="form-control" />
-        </div>
-        @*<div class="col-md-3">
-            <div class="input-group">
-                <select asp-for="UniqueCode"
-                        type="Priority"
-                        class="form-control"
-                        asp-items="Html.GetEnumSelectList<Domain.Pri>()">
-                </select>
-            </div>
-        </div>*@
-        <div class="col-md-3">
-            <input asp-for="DateCreated"
-                   type="text"
-                   placeholder="DateTime"
-                   class="form-control" />
+                   class="form-control" 
+                   required />
         </div>
     </div>
 

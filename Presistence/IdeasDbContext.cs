@@ -16,5 +16,6 @@ namespace Presistence
         }
 
         public DbSet<Idea> Ideas { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

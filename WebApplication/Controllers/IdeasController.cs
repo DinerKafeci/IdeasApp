@@ -24,6 +24,8 @@ namespace WebApplication.Controllers
             _options = options.Value;
             _mapper = mapper;
         }
+
+        [HttpGet]
         public IActionResult Index()
         {
             var ideas = _mapper.Map<IEnumerable<IdeaViewModel>>(_ideaService.GetIdeas());

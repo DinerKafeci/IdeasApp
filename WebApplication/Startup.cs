@@ -61,7 +61,7 @@ namespace WebApplication
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Ideas}/{action=Index}/{id?}");
+                    pattern: "{controller=Users}/{action=Login}/{id?}");
             });
         }
     }

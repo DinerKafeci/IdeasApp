@@ -40,12 +40,15 @@ namespace Presistence.Repository
 
         public int Insert(Idea idea)
         {
+            idea.DateCreated = DateTime.Now;
+            idea.UniqueCode = UnicodeEncoding.Unicode.GetByteCount(idea.Title);
             _context.Ideas.Add(idea);
             return _context.SaveChanges();
         }
 
         public int Update(Idea idea)
         {
+            idea.DateCreated = DateTime.Now;
             _context.Ideas.Update(idea);
             return _context.SaveChanges();
         }

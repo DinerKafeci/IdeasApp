@@ -17,6 +17,11 @@ namespace Application.Configurations
                 .ReverseMap()
                 .IgnoreAllPropertiesWithAnInaccessibleSetter()
                 .IgnoreAllSourcePropertiesWithAnInaccessibleSetter();
+
+            CreateMap<User, UserDTO>()
+                .ReverseMap()
+                .IgnoreAllPropertiesWithAnInaccessibleSetter()
+                .IgnoreAllSourcePropertiesWithAnInaccessibleSetter();
         }
     }
 }

@@ -17,6 +17,8 @@ namespace Application.Configurations
         {
             services.AddTransient<IIdeaService, IdeaService>();
             services.AddTransient<IIdeaRepository, IdeaRepository>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IUserRepository, UserRepository>();
             services.AddDbContext<IdeasDbContext>(x => x.UseSqlServer(connectionString));
 
             return services;
